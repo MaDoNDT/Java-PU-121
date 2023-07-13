@@ -10,11 +10,15 @@ public class App
 {
     public static void main( String[] args )
     {
+        /*
         System.out.println( "Hello World!" );
         new ControlDemo().run();
         do {
             new step.learning.control.MultiplicationTable().run();
         } while (true);
+        */
+
+        new step.learning.oop.Library().showCatalog();
     }
 
 }

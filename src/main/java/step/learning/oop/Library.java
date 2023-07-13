@@ -8,6 +8,9 @@ public class Library {
 
     public Library() {
         funds = new ArrayList<>();
+        funds.add(new Book("Art of Computer Programming", "Donald Knuth"));
+        funds.add(new Book("The C Programming Language", "Dennis Ritchie"));
+        funds.add(new Book("The C++ Programming Language", "Bjarne Stroustrup"));
     }
 
     public void showCatalog() {

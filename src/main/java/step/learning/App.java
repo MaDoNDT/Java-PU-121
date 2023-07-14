@@ -12,12 +12,11 @@ public class App
     {
         /*
          System.out.println( "Hello World!" );
-         new ControlDemo().run();
          do {
              new step.learning.control.MultiplicationTable().run();
          } while (true);
         */
-
+        //new ControlDemo().run();
         new step.learning.oop.Library().showCatalog();
     }
 

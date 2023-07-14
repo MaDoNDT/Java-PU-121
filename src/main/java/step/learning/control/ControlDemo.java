@@ -42,6 +42,27 @@ public class ControlDemo {
             System.out.print(" " + x);
         }
         System.out.println();
+
+        // Strings - рядки
+        String str1 = "Hello"; // String pool is used - the same object
+        String str2 = "Hello"; // String pool is used - the same object
+        String str3 = new String("Hello"); // String pool is not used - different object
+        String str4 = new String("Hello"); // different object
+        if(str1==str2) { // compare references
+            System.out.println("str1==str2");
+        }else {
+            System.out.println("str1!=str2");
+        }
+        if(str3==str4) { // compare references - different objects
+            System.out.println("str3==str4");
+        }else {
+            System.out.println("str3!=str4");
+        }
+        if(str3.equals(str4)) { // compare values - the same
+            System.out.println("str3==str4");
+        }else {
+            System.out.println("str3!=str4");
+        }
     }
 }
 /*

@@ -2,6 +2,7 @@ package step.learning.oop;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDate;
 
 public class Library {
     private final List<Literature> funds;
@@ -13,7 +14,13 @@ public class Library {
         funds.add(new Book("The C++ Programming Language", "Bjarne Stroustrup"));
         funds.add(new Booklet("Java", "Oracle"));
         funds.add(new Journal("Java Magazine", 1));
-        funds.add(new Newspaper("The New York Times", new java.util.Date()));
+        funds.add(new Newspaper("The New York Times", LocalDate.of(2010, 11, 7)));
+        funds.add(new Hologram("Ethereal Echoes", LocalDate.of(2022, 4, 9)));
+        funds.add(new Hologram("Interstellar Illusions", LocalDate.of(1998, 7, 21)));
+        funds.add(new Hologram("Visions of the Virtual", LocalDate.of(2020, 1, 1)));
+        funds.add(new Poster("Pages of Wisdom", "Sophia Bardwell"));
+        funds.add(new Poster("The Written Symphony", "Amelia Wordsworth"));
+        funds.add(new Poster("Ink and Imagination", "Oliver Pennfield"));
     }
 
     /*public void showCatalog() {
@@ -46,6 +53,12 @@ public class Library {
         showPeriodic();
         System.out.println();
         showBooksAuthors();
+        System.out.println();
+        showPosterArtist();
+        System.out.println();
+        showExpo();
+        System.out.println();
+        showNonExpo();
     }
 
     public void showCopyableCatalog(){
@@ -83,6 +96,33 @@ public class Library {
                 //System.out.println( ((Book) fund).getAuthor() );
                 Book book = (Book) fund;
                 System.out.println( book.getAuthor() );
+            }
+        }
+    }
+
+    public void showPosterArtist(){
+        System.out.println("<---Poster Artist--->");
+        for(Literature fund : funds) {
+            if(fund instanceof Poster) {
+                System.out.println( ((Poster) fund).getArtist() );
+            }
+        }
+    }
+
+    public void showExpo(){
+        System.out.println("<---Expo--->");
+        for(Literature fund : funds) {
+            if(fund instanceof Expo) {
+                System.out.println( fund.getCard() );
+            }
+        }
+    }
+
+    public void showNonExpo(){
+        System.out.println("<---Non-Expo--->");
+        for(Literature fund : funds) {
+            if(!(fund instanceof Expo)) {
+                System.out.println( fund.getCard() );
             }
         }
     }
